@@ -1,0 +1,25 @@
+version: '4.44'
+services:
+   server:
+      build: ./server
+      container_name: express-server
+      ports:
+         - '4000:4000'
+      networks:
+         - fullstack-net
+      restart: unless-stopped
+
+   client:
+      build: ./client
+      container_name: react-client
+      ports:
+         - '5173:3000'
+      networks:
+         - fullstack-net
+      restart: unless-stopped
+      depends_on:
+         - server
+
+networks:
+   fullstack-net:
+      driver: bridge

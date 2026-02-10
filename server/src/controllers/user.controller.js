@@ -49,7 +49,9 @@ const registerUser = async (req, res) => {
 // }
 
 const getProfile = (req, res) => {
-   res.json({ message: 'Profile data retrieved successfully' })
+   res.json({
+      message: 'Profile data retrieved successfully with Express Server',
+   })
 }
 
 export { registerUser, getProfile }

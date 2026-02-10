@@ -8,7 +8,7 @@ function App() {
 
    useEffect(() => {
       axios
-         .get('http://192.168.100.191:4000/api/auth/get-profile')
+         .get('http://localhost:4000/api/auth/get-profile')
          .then((response) => {
             const userData = response.data.message
             setMessage(userData)

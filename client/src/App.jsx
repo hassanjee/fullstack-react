@@ -8,7 +8,9 @@ function App() {
 
    useEffect(() => {
       axios
-         .get('http://localhost:4000/api/auth/get-profile')
+         .get(
+            'http://resumemake.steelshieldworks.com:4000/api/auth/get-profile',
+         )
          .then((response) => {
             const userData = response.data.message
             setMessage(userData)

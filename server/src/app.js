@@ -16,7 +16,7 @@ app.use(
          'http://localhost:3000',
          'http://192.168.100.191:5173',
          //deploy frontend url here
-         // 'https://auth-project-frontend.vercel.app',
+         'https://resumemake.steelshieldworks.com',
       ],
       credentials: true,
    }),

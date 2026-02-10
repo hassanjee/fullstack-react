@@ -7,10 +7,12 @@ function App() {
    const [message, setMessage] = useState('')
 
    useEffect(() => {
-      axios.get('http://server:4000/api/auth/get-profile').then((response) => {
-         const userData = response.data.message
-         setMessage(userData)
-      })
+      axios
+         .get('http://192.168.100.191:4000/api/auth/get-profile')
+         .then((response) => {
+            const userData = response.data.message
+            setMessage(userData)
+         })
    }, [])
 
    return (
